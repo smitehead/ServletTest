@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>첫번째 서버</h2>
+	<h3>
+		<a href="/webtest/basic">basic 서블릿 실행</a>
+	</h3>
+	<form action="/webtest/basic" method="post">
+		<input type="submit" value="요청">
+	</form>
+	
+	<h3>어노테이션으로 서블릿 만들기</h3>
+	<p>@webservlet("url주소(매핑주소)")</p>
+	
+	<h3>
+		<a href="/webtest/basic2">요청하기</a>
+	</h3>
+	<form action="/webtest/basic2" method="post">
+		<input type="submit" value="요청">
+	</form>
+	
+	<h3>데이터 전송하기</h3>
+	<h3>
+		<a href="/webtest/data?test=banana">전송하기</a>
+	</h3>
+	
+	<form action="/webtest/data" method="post">
+		<input type="text" name="lunch"><br>
+		<input type="checkbox" name = "lang" value="html">html
+		<input type="checkbox" name = "lang" value="css">css
+		<input type="checkbox" name = "lang" value="javascript">javascript
+		<input type="checkbox" name = "lang" value="jquery">jquery
+		<input type="checkbox" name = "lang" value="react.js">react.js
+		
+		<input type="submit" value="전송">
+	</form>
+	
+	<h3>데이터 처리하기</h3>
+	<h4>
+		<a href="/webtest/views/person.html">이동</a>
+	</h4>
+	
+	<h3>응답 처리하기</h3>
+	<p>서블릿의 httpservletresonse객체를 이용한다 
+		setContentType() 전송할 데이터의 타입 설정
+	</p>
+	<p>text/html,application/json,application.octet</p>
+	<p>getWriter(),getOutputstrea()</p>
+	
+	<h4>
+		<a href="/webtest/responsetest.do">응답하기</a>
+	</h4>
+	
+	<h3>재요청 처리하기</h3>
+	<p> 
+		response.sendRedirect()메소드이용 <br>
+		302코드 상태코드를 반환하면서 재요청할 주소를 응답해주는 기능<br>
+		자동으로 url주소가 변경됨 , httpservletRequest,httpServletResponse 객체가 새로 생성 <br>
+	</p>
+	<a href="/webtest/senderedirettest.do">sendRedirect</a>
+	
+	<h3>저장 기간이 다른 저장 공간</h3>
+	<p>
+		HttpServletRequest.setAttribute() : 요청해서 응답전까지
+		HttpSession.setAttribute() : 생성시부터 소멸시까지
+		ServletContext.setAttribute() :서버 시작부터 서버 종료시까지
+	</p>
+	
+	<h3>
+		<a href="/webtest/datatest.do">테스트</a>
+	</h3>
+	
+	<h3>추가 데이터</h3>
+	<h3>
+	 <a href="/webtest/extradata.do">추가데이터 확인</a>
+	</h3>
+</body>
+</html>

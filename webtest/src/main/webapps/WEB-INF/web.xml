@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+	<!-- 서블릿 등록 및 주소 매핑하기 -->
+	<servlet>
+		<servlet-name>basic</servlet-name>
+		<servlet-class>com.web.controller.BasicServlet</servlet-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>/config/setting.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>basic</servlet-name>
+		<url-pattern>/basic</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>logincheck</filter-name>
+		<filter-class>com.web.common.filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>logincheck</filter-name>
+		<url-pattern>/view/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 에러페이지 설정 -->
+	<error-page>
+		<exception-type>com.web.common.exception.LoginException</exception-type>
+		<location>/error.do</location>
+	</error-page>
+	<context-param>
+		<param-name>configfile</param-name>
+		<param-value>/config/config.properties</param-value>
+	</context-param>
+</web-app>

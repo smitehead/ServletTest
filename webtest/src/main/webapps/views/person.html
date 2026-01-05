@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>개인취향테스트</h2>
+	<form action="/webtest/persontest.do" method="post">
+		<ul>
+			<li>
+				<label>이름<input type="text" name="name"></label>
+			</li>
+			<li>
+				<label>나이<input type="text" name="age"></label>
+			</li>
+			<li>
+				<label>키<input type="text" name="height"></label>
+			</li>
+			<li>
+				좋아하는 색<br>
+				<label>빨강<input type="radio" name="color" value="red"></label>
+				<label>주황<input type="radio" name="color" value="orange"></label>
+				<label>노랑<input type="radio" name="color" value="yellow"></label>
+				<label>초록<input type="radio" name="color" value="green"></label>
+				<label>파랑<input type="radio" name="color" value="blue"></label>
+				<label>남색<input type="radio" name="color" value="indigo"></label>
+				<label>보라<input type="radio" name="color" value="purple"></label>
+			</li>
+			<li>
+				좋아하는 동물<br>
+				<label>강아지<input type="checkbox" name="animals" value="강아지"></label>
+				<label>고양이<input type="checkbox" name="animals" value="고양이"></label>
+				<label>햄스터<input type="checkbox" name="animals" value="햄스터"></label>
+				<label>판다<input type="checkbox" name="animals" value="판다"></label>
+				<label>돌고래<input type="checkbox" name="animals" value="돌고래"></label>
+				<label>원숭이<input type="checkbox" name="animals" value="원숭이"></label>
+				<label>금붕어<input type="checkbox" name="animals" value="금붕어"></label>
+				<label>앵무새<input type="checkbox" name="animals" value="앵무새"></label>
+				<label>펭귄<input type="checkbox" name="animals" value="펭귄"></label>
+			</li>
+			<li>
+				점심메뉴<br>
+				<select name="lunch">
+					<option value="짜장면">짜장면</option>
+					<option value="윤쉐프">윤쉐프</option>
+					<option value="블랙국밥">블랙국밥</option>
+					<option value="초밥">초밥</option>
+					<option value="포케">포케</option>
+				</select>
+			</li>
+			<li>
+				자기소개<br>
+				<textarea name="info" cols="50" rows="10"></textarea>
+			</li>
+		</ul>
+		<input type="submit" value="제출">
+		<input type="reset" value="취소">
+		
+		</body>
+		</html>
